@@ -72,7 +72,7 @@ contract StandardToken is Token {
     mapping (address => mapping (address => uint256)) allowed;
 }
 
-contract HumanStandardToken is StandardToken { 
+contract TFOAToken is StandardToken { 
 
     /* Public variables of the token */
     string public name;                   //名称: eg Simon Bucks
@@ -80,7 +80,7 @@ contract HumanStandardToken is StandardToken {
     string public symbol;               //token简称: eg SBX
     string public version = 'H0.1';    //版本
 
-    function HumanStandardToken(uint256 _initialAmount, string _tokenName, uint8 _decimalUnits, string _tokenSymbol) {
+    function TFOAToken(uint256 _initialAmount, string _tokenName, uint8 _decimalUnits, string _tokenSymbol) {
         balances[msg.sender] = _initialAmount; // 初始token数量给予消息发送者
         totalSupply = _initialAmount;         // 设置初始总量
         name = _tokenName;                   // token名称
